@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F20F678321172FA50068A62A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F678221172FA50068A62A /* AppDelegate.swift */; };
-		F20F678521172FA50068A62A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F678421172FA50068A62A /* ViewController.swift */; };
-		F20F678821172FA50068A62A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F678621172FA50068A62A /* Main.storyboard */; };
+		F20F678821172FA50068A62A /* EnterNumber.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F678621172FA50068A62A /* EnterNumber.storyboard */; };
 		F20F678A21172FA60068A62A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20F678921172FA60068A62A /* Assets.xcassets */; };
 		F20F678D21172FA60068A62A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20F678B21172FA60068A62A /* LaunchScreen.storyboard */; };
 		F20F679821172FA60068A62A /* PersonalCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F679721172FA60068A62A /* PersonalCalculatorTests.swift */; };
 		F20F67A321172FA60068A62A /* PersonalCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67A221172FA60068A62A /* PersonalCalculatorUITests.swift */; };
+		F20F67B6211739360068A62A /* EnterNumberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67B1211739360068A62A /* EnterNumberPresenter.swift */; };
+		F20F67B9211739360068A62A /* EnterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67B4211739360068A62A /* EnterNumberViewController.swift */; };
+		F20F67BB21173C0D0068A62A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67BA21173C0D0068A62A /* BaseViewController.swift */; };
+		F20F67C421177D3F0068A62A /* ResultaViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */; };
+		F20F67C721177D3F0068A62A /* ResultaViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,7 @@
 /* Begin PBXFileReference section */
 		F20F677F21172FA50068A62A /* PersonalCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20F678221172FA50068A62A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F20F678421172FA50068A62A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F20F678721172FA50068A62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F20F678721172FA50068A62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EnterNumber.storyboard; sourceTree = "<group>"; };
 		F20F678921172FA60068A62A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20F678C21172FA60068A62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20F678E21172FA60068A62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		F20F679E21172FA60068A62A /* PersonalCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20F67A221172FA60068A62A /* PersonalCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCalculatorUITests.swift; sourceTree = "<group>"; };
 		F20F67A421172FA60068A62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20F67B1211739360068A62A /* EnterNumberPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberPresenter.swift; sourceTree = "<group>"; };
+		F20F67B4211739360068A62A /* EnterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberViewController.swift; sourceTree = "<group>"; };
+		F20F67BA21173C0D0068A62A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultaViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultaViewControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				F20F678221172FA50068A62A /* AppDelegate.swift */,
-				F20F678421172FA50068A62A /* ViewController.swift */,
-				F20F678621172FA50068A62A /* Main.storyboard */,
 				F20F678921172FA60068A62A /* Assets.xcassets */,
 				F20F678B21172FA60068A62A /* LaunchScreen.storyboard */,
 				F20F678E21172FA60068A62A /* Info.plist */,
+				F20F67BC21177B6D0068A62A /* EnterNumber */,
+				F20F67BA21173C0D0068A62A /* BaseViewController.swift */,
 			);
 			path = PersonalCalculator;
 			sourceTree = "<group>";
@@ -123,6 +131,26 @@
 				F20F67A421172FA60068A62A /* Info.plist */,
 			);
 			path = PersonalCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		F20F67BC21177B6D0068A62A /* EnterNumber */ = {
+			isa = PBXGroup;
+			children = (
+				F20F67BD21177CC40068A62A /* Result */,
+				F20F678621172FA50068A62A /* EnterNumber.storyboard */,
+				F20F67B4211739360068A62A /* EnterNumberViewController.swift */,
+				F20F67B1211739360068A62A /* EnterNumberPresenter.swift */,
+			);
+			path = EnterNumber;
+			sourceTree = "<group>";
+		};
+		F20F67BD21177CC40068A62A /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */,
+				F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +259,7 @@
 			files = (
 				F20F678D21172FA60068A62A /* LaunchScreen.storyboard in Resources */,
 				F20F678A21172FA60068A62A /* Assets.xcassets in Resources */,
-				F20F678821172FA50068A62A /* Main.storyboard in Resources */,
+				F20F678821172FA50068A62A /* EnterNumber.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20F678521172FA50068A62A /* ViewController.swift in Sources */,
+				F20F67B6211739360068A62A /* EnterNumberPresenter.swift in Sources */,
+				F20F67BB21173C0D0068A62A /* BaseViewController.swift in Sources */,
+				F20F67C721177D3F0068A62A /* ResultaViewControllerViewController.swift in Sources */,
+				F20F67B9211739360068A62A /* EnterNumberViewController.swift in Sources */,
 				F20F678321172FA50068A62A /* AppDelegate.swift in Sources */,
+				F20F67C421177D3F0068A62A /* ResultaViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +325,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F20F678621172FA50068A62A /* Main.storyboard */ = {
+		F20F678621172FA50068A62A /* EnterNumber.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F20F678721172FA50068A62A /* Base */,
 			);
-			name = Main.storyboard;
+			name = EnterNumber.storyboard;
 			sourceTree = "<group>";
 		};
 		F20F678B21172FA60068A62A /* LaunchScreen.storyboard */ = {
