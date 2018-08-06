@@ -10,6 +10,8 @@ import Foundation
 
 protocol EnterNumberView: BaseView {
     func goToResultScreen(_ result: Double)
+    func accessCamera()
+    func accessGallery()
 }
 
 //No return statements
@@ -34,5 +36,13 @@ extension EnterNumberPresenter {
             view?.goToResultScreen(result)
         }
         
+    }
+    
+    func selectCamera() {
+        view?.accessCamera()
+    }
+    
+    func selectGallery() {
+        view?.accessGallery()
     }
 }
