@@ -35,9 +35,6 @@ class EnterNumberViewController: BaseViewController {
         if presenter == nil {
             presenter = EnterNumberPresenter(with: self)
         }
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     @IBAction func tappedSave(_ sender: Any) {
@@ -48,7 +45,6 @@ class EnterNumberViewController: BaseViewController {
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
-            // we got back an error!
             showAlertWith(title: "Save error", message: error.localizedDescription)
         } else {
             showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
@@ -90,8 +86,11 @@ class EnterNumberViewController: BaseViewController {
     //Calculate
     @IBAction func tappedResult(_ sender: Any) {
         if let price = priceTextField.text, let ratio = ratioTextField.text, let image = myPhotoView.image {
-            //presenter.getResult(price: price, ratio: ratio)
-            let newImage = self.burnTextToImage(text: price, image: image, atPoint: CGPoint(x: 20, y: 20))
+            let priceDouble = Double(price) ?? 0
+            let ratioDouble = Double(ratio) ?? 0
+            let finalPriceDouble = priceDouble * ratioDouble
+            let finalPrice = String(format: "%.3f", finalPriceDouble)
+            let newImage = self.burnTextToImage(text: finalPrice, image: image, atPoint: CGPoint(x: 20, y: 20))
             myPhotoView.image = newImage
         } else {
             self.show(error: "Price and Ratio are both required.")
@@ -124,12 +123,6 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
             pc.sourceType = .photoLibrary
             self.present(pc, animated: true, completion: nil)
         }
-    }
-    
-    func goToResultScreen(_ result: Double) {
-        let resultString = String(result)
-        let vc = ResultViewControllerViewController.createNav(resultString)
-        self.present(vc, animated: true, completion: nil)
     }
     
     //ImagePickerDelegate method

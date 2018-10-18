@@ -9,7 +9,6 @@
 import Foundation
 
 protocol EnterNumberView: BaseView {
-    func goToResultScreen(_ result: Double)
     func accessCamera()
     func accessGallery()
 }
@@ -30,13 +29,6 @@ class EnterNumberPresenter: NSObject {
 
 //API
 extension EnterNumberPresenter {
-    func getResult(price: String, ratio: String) {
-        if let price = Double(price), let ratio = Double(ratio) {
-            let result = price * ratio
-            view?.goToResultScreen(result)
-        }
-    }
-    
     func selectCamera() {
         view?.accessCamera()
     }

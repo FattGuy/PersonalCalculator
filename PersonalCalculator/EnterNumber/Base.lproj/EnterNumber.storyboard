@@ -22,15 +22,16 @@
                                 <rect key="frame" x="40" y="362" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-1s-xNB">
                                 <rect key="frame" x="139" y="545" width="97" height="30"/>
-                                <color key="backgroundColor" red="0.1058823529" green="0.45882352939999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.74901960779999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ZHO-rb-X7O"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="cid-0l-sns"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Watermark">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -40,11 +41,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYK-bx-ZWR">
                                 <rect key="frame" x="139" y="499" width="97" height="30"/>
-                                <color key="backgroundColor" red="0.1058823529" green="0.45882352939999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.74901960779999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gd3-f7-7H1"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="iqn-l1-Whz"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Reload">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -54,14 +56,16 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-sh-cV1">
                                 <rect key="frame" x="16" y="88" width="343" height="208"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NI-u2-9kS">
                                 <rect key="frame" x="269" y="310" width="90" height="30"/>
-                                <color key="backgroundColor" red="0.1058823529" green="0.45882352939999999" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.74901960779999999" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3ma-S3-9hY"/>
-                                    <constraint firstAttribute="width" constant="90" id="3t8-9c-inm"/>
+                                    <constraint firstAttribute="width" constant="90" id="ULj-7X-ky7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="Take Photo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -73,7 +77,7 @@
                                 <rect key="frame" x="40" y="409" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,12 +86,10 @@
                             <constraint firstItem="iWt-o0-ABm" firstAttribute="top" secondItem="5NI-u2-9kS" secondAttribute="bottom" constant="22" id="3tc-oh-0vt"/>
                             <constraint firstItem="s1y-2z-GkE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4O4-nk-MdT"/>
                             <constraint firstItem="mpU-sh-cV1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="60N-Sy-wE1"/>
-                            <constraint firstItem="s1y-2z-GkE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H8i-Vd-9lE"/>
                             <constraint firstItem="ch4-1s-xNB" firstAttribute="top" secondItem="nYK-bx-ZWR" secondAttribute="bottom" constant="16" id="HMl-5q-0hX"/>
                             <constraint firstItem="iWt-o0-ABm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="J2t-1l-qKy"/>
                             <constraint firstItem="5NI-u2-9kS" firstAttribute="top" secondItem="mpU-sh-cV1" secondAttribute="bottom" constant="14" id="M1x-Jd-4cp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5NI-u2-9kS" secondAttribute="trailing" constant="16" id="Pfw-Fy-TAk"/>
-                            <constraint firstItem="iWt-o0-ABm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R4d-7t-vPL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s1y-2z-GkE" secondAttribute="bottom" constant="228" id="SVB-IK-90n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s1y-2z-GkE" secondAttribute="trailing" constant="40" id="URu-CB-HGv"/>
                             <constraint firstItem="ch4-1s-xNB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eZS-87-zfc"/>
@@ -114,51 +116,11 @@
                         <outlet property="resetButton" destination="nYK-bx-ZWR" id="91G-kz-ycm"/>
                         <outlet property="resultButton" destination="ch4-1s-xNB" id="Q66-Ef-fnJ"/>
                         <outlet property="takeButton" destination="5NI-u2-9kS" id="5Ro-aC-KKz"/>
-                        <segue destination="z20-n0-UPK" kind="show" identifier="goToResult" id="qKO-iH-e2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="31.934032983508249"/>
-        </scene>
-        <!--Result View Controller View Controller-->
-        <scene sceneID="mqq-kH-6bH">
-            <objects>
-                <viewController storyboardIdentifier="ResultViewControllerViewController" id="z20-n0-UPK" customClass="ResultViewControllerViewController" customModule="PersonalCalculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kxi-A0-YT6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TPp-Fi-Xld">
-                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="9gH-BH-99X"/>
-                                    <constraint firstAttribute="height" constant="128" id="nVz-Lp-AWg"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="TPp-Fi-Xld" firstAttribute="centerY" secondItem="Kxi-A0-YT6" secondAttribute="centerY" id="JEA-mE-KKm"/>
-                            <constraint firstItem="TPp-Fi-Xld" firstAttribute="centerX" secondItem="Kxi-A0-YT6" secondAttribute="centerX" id="aq9-ZE-tXQ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="sjd-0L-Mzf"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Sfp-v6-CIe">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tnl-5k-deR">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="tappedCancel:" destination="z20-n0-UPK" id="Q1t-rZ-jnf"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="resultImageView" destination="TPp-Fi-Xld" id="Ruu-hH-opW"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2GI-rz-yGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1732" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XrF-fY-VN7">
