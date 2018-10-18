@@ -4,7 +4,11 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Allow this app to access you photos?</string>
-	<key>CFBundleDevelopmentRegion</key>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>You can select photos to attach to reports.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Please allow access to save photo in your photo library</string>
+    <key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>

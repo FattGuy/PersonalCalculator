@@ -40,11 +40,34 @@ class EnterNumberViewController: BaseViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-    //Photo
-    @IBAction func tappedReTakePhoto(_ sender: Any) {
-        //TODO:
+    @IBAction func tappedSave(_ sender: Any) {
+        if let image = myPhotoView.image {
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
     }
     
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            showAlertWith(title: "Save error", message: error.localizedDescription)
+        } else {
+            showAlertWith(title: "Saved!", message: "Your image has been saved to your photos.")
+        }
+    }
+    
+    func showAlertWith(title: String, message: String){
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    //Photo
     @IBAction func tappedTakePhoto(_ sender: Any) {
         self.selectSource()
     }
