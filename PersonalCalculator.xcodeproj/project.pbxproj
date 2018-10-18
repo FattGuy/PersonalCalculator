@@ -16,8 +16,11 @@
 		F20F67B6211739360068A62A /* EnterNumberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67B1211739360068A62A /* EnterNumberPresenter.swift */; };
 		F20F67B9211739360068A62A /* EnterNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67B4211739360068A62A /* EnterNumberViewController.swift */; };
 		F20F67BB21173C0D0068A62A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67BA21173C0D0068A62A /* BaseViewController.swift */; };
-		F20F67C421177D3F0068A62A /* ResultaViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */; };
-		F20F67C721177D3F0068A62A /* ResultaViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */; };
+		F20F67C421177D3F0068A62A /* ResultViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67BF21177D3F0068A62A /* ResultViewControllerPresenter.swift */; };
+		F20F67C721177D3F0068A62A /* ResultViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20F67C221177D3F0068A62A /* ResultViewControllerViewController.swift */; };
+		F2B937D62179052F00B74A78 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D52179052F00B74A78 /* UIViewExtension.swift */; };
+		F2B937D82179054700B74A78 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D72179054700B74A78 /* UIImageExtension.swift */; };
+		F2B937DA2179056200B74A78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D92179056200B74A78 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,11 @@
 		F20F67B1211739360068A62A /* EnterNumberPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberPresenter.swift; sourceTree = "<group>"; };
 		F20F67B4211739360068A62A /* EnterNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNumberViewController.swift; sourceTree = "<group>"; };
 		F20F67BA21173C0D0068A62A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultaViewControllerPresenter.swift; sourceTree = "<group>"; };
-		F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultaViewControllerViewController.swift; sourceTree = "<group>"; };
+		F20F67BF21177D3F0068A62A /* ResultViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerPresenter.swift; sourceTree = "<group>"; };
+		F20F67C221177D3F0068A62A /* ResultViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerViewController.swift; sourceTree = "<group>"; };
+		F2B937D52179052F00B74A78 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F2B937D72179054700B74A78 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		F2B937D92179056200B74A78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +154,8 @@
 		F20F67BD21177CC40068A62A /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				F20F67BF21177D3F0068A62A /* ResultaViewControllerPresenter.swift */,
-				F20F67C221177D3F0068A62A /* ResultaViewControllerViewController.swift */,
+				F20F67BF21177D3F0068A62A /* ResultViewControllerPresenter.swift */,
+				F20F67C221177D3F0068A62A /* ResultViewControllerViewController.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -157,6 +163,9 @@
 		F2BF05D62118D07800D9A87A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F2B937D52179052F00B74A78 /* UIViewExtension.swift */,
+				F2B937D72179054700B74A78 /* UIImageExtension.swift */,
+				F2B937D92179056200B74A78 /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -229,13 +238,16 @@
 				TargetAttributes = {
 					F20F677E21172FA50068A62A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					F20F679221172FA60068A62A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = F20F677E21172FA50068A62A;
 					};
 					F20F679D21172FA60068A62A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = F20F677E21172FA50068A62A;
 					};
 				};
@@ -294,10 +306,13 @@
 			files = (
 				F20F67B6211739360068A62A /* EnterNumberPresenter.swift in Sources */,
 				F20F67BB21173C0D0068A62A /* BaseViewController.swift in Sources */,
-				F20F67C721177D3F0068A62A /* ResultaViewControllerViewController.swift in Sources */,
+				F20F67C721177D3F0068A62A /* ResultViewControllerViewController.swift in Sources */,
 				F20F67B9211739360068A62A /* EnterNumberViewController.swift in Sources */,
+				F2B937D62179052F00B74A78 /* UIViewExtension.swift in Sources */,
+				F2B937DA2179056200B74A78 /* UIImageViewExtension.swift in Sources */,
 				F20F678321172FA50068A62A /* AppDelegate.swift in Sources */,
-				F20F67C421177D3F0068A62A /* ResultaViewControllerPresenter.swift in Sources */,
+				F20F67C421177D3F0068A62A /* ResultViewControllerPresenter.swift in Sources */,
+				F2B937D82179054700B74A78 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -497,7 +512,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -517,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalCalculator.app/PersonalCalculator";
 			};
@@ -538,7 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalCalculator.app/PersonalCalculator";
 			};
@@ -558,7 +573,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PersonalCalculator;
 			};
@@ -578,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feng.chang.PersonalCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PersonalCalculator;
 			};

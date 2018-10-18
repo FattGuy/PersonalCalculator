@@ -66,15 +66,21 @@ class EnterNumberViewController: BaseViewController {
     
     //Calculate
     @IBAction func tappedResult(_ sender: Any) {
-        if let price = priceTextField.text, let ratio = ratioTextField.text {
-            presenter.getResult(price: price, ratio: ratio)
+        if let price = priceTextField.text, let ratio = ratioTextField.text, let image = myPhotoView.image {
+            //presenter.getResult(price: price, ratio: ratio)
+            let newImage = self.burnTextToImage(text: price, image: image, atPoint: CGPoint(x: 20, y: 20))
+            myPhotoView.image = newImage
         } else {
             self.show(error: "Price and Ratio are both required.")
         }
     }
     
     @IBAction func tappedReset(_ sender: Any) {
-        //TODO:
+        clear()
+    }
+    
+    func clear() {
+        self.loadView()
     }
 }
 
@@ -99,7 +105,7 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
     
     func goToResultScreen(_ result: Double) {
         let resultString = String(result)
-        let vc = ResultaViewControllerViewController.createNav(resultString)
+        let vc = ResultViewControllerViewController.createNav(resultString)
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -108,13 +114,46 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
         self.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.imagePickedBlock?(image)
-        }else{
-            print("Something went wrong")
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        currentVC.dismiss(animated: true, completion: nil)
+        
+        myPhotoView.image = selectedImage
+        dismiss(animated: true, completion: nil)
     }
+    
+    func burnTextToImage(text: String, image: UIImage, atPoint: CGPoint) -> UIImage? {
+        // Setup the font specific variables
+        let textColor: UIColor = UIColor.red
+        let textFont: UIFont = UIFont.systemFont(ofSize: 400)
+        
+        //Setups up the font attributes that will be later used to dictate how the text should be drawn
+        let textFontAttributes = [
+            NSAttributedString.Key.font: textFont,
+            NSAttributedString.Key.foregroundColor: textColor,
+            ]
+        
+        // Create bitmap based graphics context
+        UIGraphicsBeginImageContextWithOptions(image.size, false, 0.0)
+        
+        
+        //Put the image into a rectangle as large as the original image.
+        image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
+        
+        // Our drawing bounds
+        let drawingBounds = CGRect(origin: CGPoint.zero, size: image.size)
+        
+        let textSize = text.size(withAttributes: [NSAttributedString.Key.font:textFont])
+        let textRect = CGRect(x: drawingBounds.size.width/2 - textSize.width/2, y: drawingBounds.size.height/2 - textSize.height/2,
+                              width: textSize.width, height: textSize.height)
+        
+        text.draw(in: textRect, withAttributes: textFontAttributes)
+        
+        // Get the image from the graphics context
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
 }

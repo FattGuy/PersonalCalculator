@@ -35,7 +35,6 @@ extension EnterNumberPresenter {
             let result = price * ratio
             view?.goToResultScreen(result)
         }
-        
     }
     
     func selectCamera() {

@@ -8,17 +8,17 @@
 
 import Foundation
 
-protocol ResultaViewControllerView: BaseView {
+protocol ResultViewControllerView: BaseView {
     func showResutl(_ result: String?)
 }
 
 //No return statements
-class ResultaViewControllerPresenter: NSObject {
+class ResultViewControllerPresenter: NSObject {
     
-    weak var view: ResultaViewControllerView?
+    weak var view: ResultViewControllerView?
     var result: String?
     
-    init(with view: ResultaViewControllerView, result: String?) {
+    init(with view: ResultViewControllerView, result: String?) {
         self.view = view
         self.result = result
     }
@@ -29,7 +29,7 @@ class ResultaViewControllerPresenter: NSObject {
 }
 
 //API
-extension ResultaViewControllerPresenter {
+extension ResultViewControllerPresenter {
     func getResult(_ result: String?) {
         view?.showResutl(result)
     }

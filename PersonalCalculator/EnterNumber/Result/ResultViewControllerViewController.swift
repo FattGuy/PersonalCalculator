@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ResultaViewControllerViewController: BaseViewController {
+class ResultViewControllerViewController: BaseViewController {
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultImageView: UIImageView!
     
-    var presenter: ResultaViewControllerPresenter!
+    var presenter: ResultViewControllerPresenter!
     
     //Initializer
-    static func create(_ result: String?) -> ResultaViewControllerViewController {
-        let vc = UIStoryboard(name: "EnterNumber", bundle: nil).instantiateViewController(withIdentifier: "ResultaViewControllerViewController") as! ResultaViewControllerViewController
-        vc.presenter = ResultaViewControllerPresenter(with: vc, result: result)
+    static func create(_ result: String?) -> ResultViewControllerViewController {
+        let vc = UIStoryboard(name: "EnterNumber", bundle: nil).instantiateViewController(withIdentifier: "ResultViewControllerViewController") as! ResultViewControllerViewController
+        vc.presenter = ResultViewControllerPresenter(with: vc, result: result)
         return vc
     }
     
@@ -38,8 +38,8 @@ class ResultaViewControllerViewController: BaseViewController {
     }
 }
 
-extension ResultaViewControllerViewController: ResultaViewControllerView {
+extension ResultViewControllerViewController: ResultViewControllerView {
     func showResutl(_ result: String?) {
-        resultLabel.text = result
+        #warning ("todo")
     }
 }
