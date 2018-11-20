@@ -17,6 +17,7 @@ protocol EnterNumberView: BaseView {
 class EnterNumberPresenter: NSObject {
     
     weak var view: EnterNumberView?
+    var price: String?
     
     init(with view: EnterNumberView) {
         self.view = view
@@ -29,6 +30,10 @@ class EnterNumberPresenter: NSObject {
 
 //API
 extension EnterNumberPresenter {
+    func updatePrice(_ price: String?) {
+        self.price = price
+    }
+    
     func selectCamera() {
         view?.accessCamera()
     }

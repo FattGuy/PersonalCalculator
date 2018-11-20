@@ -11,12 +11,9 @@ import UIKit
 class EnterNumberViewController: BaseViewController {
     
     @IBOutlet weak var myPhotoView: UIImageView!
-    @IBOutlet weak var reTakeButton: UIButton!
     @IBOutlet weak var takeButton: UIButton!
-    
     @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var ratioTextField: UITextField!
-    
+    @IBOutlet weak var extraTextField: UITextField!
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
@@ -32,6 +29,7 @@ class EnterNumberViewController: BaseViewController {
     //Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        priceTextField.delegate = self
         if presenter == nil {
             presenter = EnterNumberPresenter(with: self)
         }
@@ -84,16 +82,23 @@ class EnterNumberViewController: BaseViewController {
     }
     
     //Calculate
-    @IBAction func tappedResult(_ sender: Any) {
-        if let price = priceTextField.text, let ratio = ratioTextField.text, let image = myPhotoView.image {
+    @IBAction func tappedWatermark(_ sender: Any) {
+        if let price = presenter.price, let image = myPhotoView.image {
             let priceDouble = Double(price) ?? 0
-            let ratioDouble = Double(ratio) ?? 0
-            let finalPriceDouble = priceDouble * ratioDouble
-            let finalPrice = String(format: "%.3f", finalPriceDouble)
-            let newImage = self.burnTextToImage(text: finalPrice, image: image, atPoint: CGPoint(x: 20, y: 20))
+            let finalPriceDouble = priceDouble
+            let finalPrice = String(format: "$%.3f", finalPriceDouble)
+            let newImage = self.burnTextToImage(text: finalPrice, image: image)
             myPhotoView.image = newImage
         } else {
             self.show(error: "Price and Ratio are both required.")
+        }
+    }
+    
+    @IBAction func tappedFinal(_ sender: Any) {
+        if let final = extraTextField.text {
+            let finalPirce = (Double(final) ?? 0)
+            priceTextField.text = finalPirce.description
+            presenter.updatePrice(priceTextField.text)
         }
     }
     
@@ -139,10 +144,10 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
         dismiss(animated: true, completion: nil)
     }
     
-    func burnTextToImage(text: String, image: UIImage, atPoint: CGPoint) -> UIImage? {
+    func burnTextToImage(text: String, image: UIImage) -> UIImage? {
         // Setup the font specific variables
         let textColor: UIColor = UIColor.red
-        let textFont: UIFont = UIFont.systemFont(ofSize: 400)
+        let textFont: UIFont = UIFont.systemFont(ofSize: 200)
         
         //Setups up the font attributes that will be later used to dictate how the text should be drawn
         let textFontAttributes = [
@@ -157,11 +162,8 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
         //Put the image into a rectangle as large as the original image.
         image.draw(in: CGRect(origin: CGPoint.zero, size: image.size))
         
-        // Our drawing bounds
-        let drawingBounds = CGRect(origin: CGPoint.zero, size: image.size)
-        
         let textSize = text.size(withAttributes: [NSAttributedString.Key.font:textFont])
-        let textRect = CGRect(x: drawingBounds.size.width/2 - textSize.width/2, y: drawingBounds.size.height/2 - textSize.height/2,
+        let textRect = CGRect(x: 16, y: 16,
                               width: textSize.width, height: textSize.height)
         
         text.draw(in: textRect, withAttributes: textFontAttributes)
@@ -171,5 +173,15 @@ extension EnterNumberViewController: EnterNumberView, UIImagePickerControllerDel
         UIGraphicsEndImageContext()
         
         return newImage
+    }
+}
+
+extension EnterNumberViewController: UITextFieldDelegate {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let mnTax = 1.07
+        let price = (Double(textField.text ?? "0") ?? 0) * mnTax
+        textField.text = price.description
+        presenter.updatePrice(textField.text)
+        return true
     }
 }

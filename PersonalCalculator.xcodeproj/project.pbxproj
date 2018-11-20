@@ -19,6 +19,7 @@
 		F2B937D62179052F00B74A78 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D52179052F00B74A78 /* UIViewExtension.swift */; };
 		F2B937D82179054700B74A78 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D72179054700B74A78 /* UIImageExtension.swift */; };
 		F2B937DA2179056200B74A78 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B937D92179056200B74A78 /* UIImageViewExtension.swift */; };
+		F2F934BE21A4785A00C85187 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F934BD21A4785A00C85187 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F2B937D52179052F00B74A78 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F2B937D72179054700B74A78 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		F2B937D92179056200B74A78 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		F2F934BD21A4785A00C85187 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		F20F678121172FA50068A62A /* PersonalCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				F2F934BC21A4781600C85187 /* Model */,
 				F2BF05D62118D07800D9A87A /* Extension */,
 				F20F678221172FA50068A62A /* AppDelegate.swift */,
 				F20F678921172FA60068A62A /* Assets.xcassets */,
@@ -154,6 +157,14 @@
 				F2B937D92179056200B74A78 /* UIImageViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F2F934BC21A4781600C85187 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2F934BD21A4785A00C85187 /* Product.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20F67B6211739360068A62A /* EnterNumberPresenter.swift in Sources */,
+				F2F934BE21A4785A00C85187 /* Product.swift in Sources */,
 				F20F67BB21173C0D0068A62A /* BaseViewController.swift in Sources */,
 				F20F67B9211739360068A62A /* EnterNumberViewController.swift in Sources */,
 				F2B937D62179052F00B74A78 /* UIViewExtension.swift in Sources */,
